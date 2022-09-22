@@ -33,6 +33,10 @@ nm[4] <- 3
 
 array4a <- populate4array(nm[1], nm[2], nm[3], nm[4], inc1, array4a)
 
+#reset inc1 to largest number in array4a
+inc1 <- array4a[nm[1], nm[2], nm[3], nm[4]]
+
+#increment values of nm by 1
 for (i in 1:length(nm)) {
   nm[i] <- nm[i] +1
 }
