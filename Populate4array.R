@@ -20,17 +20,23 @@ populate4array <- function(d1, d2, d3, d4, inc, arr) {
   arr <- arr4
 }
 
-nm1 <- 2
-nm2 <- 3
-nm3 <- 2
-nm4 <- 3
-
 inc1 <- -1
 
-#array4a <- array(dim = c(1))
-#array4b <- array4a
+array4a <- array(dim = c(1))
+array4b <- array4a
 
-array4a <- populate4array(nm1, nm2, nm3, nm4, inc1, array4a)
-array4b <- populate4array(1, 2, 3, 4, inc1, array4b)
+nm <- array(dim = c(4))
+nm[1] <- 2
+nm[2] <- 3
+nm[3] <- 2
+nm[4] <- 3
+
+array4a <- populate4array(nm[1], nm[2], nm[3], nm[4], inc1, array4a)
+
+for (i in 1:length(nm)) {
+  nm[i] <- nm[i] +1
+}
+
+array4b <- populate4array(nm[1], nm[2], nm[3], nm[4], inc1, array4b)
 
 
