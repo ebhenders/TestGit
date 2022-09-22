@@ -20,6 +20,23 @@ populate4array <- function(d1, d2, d3, d4, inc, arr) {
   arr <- arr4
 }
 
+
+## multiply
+multiplyarray <- function(d1, d2, d3, d4, factor, arr) {
+  arr4 <- arr
+  for (i in 1:d1) {
+    for (j in 1:d2) {
+      for (k in 1:d3) {
+        for (l in 1:d4) {
+           arr4[i, j, k, l] <- arr4[i, j, k, l] * factor
+        }
+      }
+    }
+  }
+  ## populate the modified object with the new object data
+  arr <- arr4
+}
+
 inc1 <- -1
 
 array4a <- array(dim = c(1))
@@ -42,5 +59,7 @@ for (i in 1:length(nm)) {
 }
 
 array4b <- populate4array(nm[1], nm[2], nm[3], nm[4], inc1, array4b)
+
+array4b <- multiplyarray(nm[1], nm[2], nm[3], nm[4], 4, array4b)
 
 
